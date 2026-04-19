@@ -10,14 +10,14 @@ export default function HomeTopText() {
           </div>
         <div className='font text-[9.5vw] flex justify-center items-center uppercase leading-[8vw] text-amber-50'>
           all 
-          <div className=' h-[8vw] rounded-full overflow-hidden'>
+          <div className=' h-[6vw] w-[12vw] rounded-full -mt-2 overflow-hidden'>
             <Video className='rounded-full'/>
             </div>
             things
             </div>
         <div className='font text-[9.5vw] flex justify-center items-center uppercase leading-[8vw] text-amber-50'>
           creative
-          </div>
+          </div> 
     </div>
     </>
   )
