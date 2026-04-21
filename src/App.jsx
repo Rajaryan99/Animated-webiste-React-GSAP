@@ -18,14 +18,14 @@ function App() {
       height:0,
       duration:1,
       stagger:{
-        amount:-0.3
+        amount:-0.25
       }
 
     })
     tl.to('.stair', {
       y:'100%',
       stagger:{
-        amount:-0.3
+        amount:-0.25
       }
     })
   })
@@ -34,13 +34,15 @@ function App() {
   return (
     <>
 
-    <div className='h-screen w-full fixed z-10  flex'>
+     <div className='h-screen w-full fixed z-10  flex top-0' >
+      <div className='h-full w-full  flex'>
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
     </div>
+     </div>
 
   <Routes>
     <Route path='/' element={<Home/>} />
