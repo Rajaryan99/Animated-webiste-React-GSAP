@@ -2,6 +2,7 @@
   import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
+import { useLocation } from 'react-router-dom'
   
 
   export default function stairs() {
@@ -9,11 +10,13 @@ import { useRef } from 'react'
     
   const stairRef = useRef(null)
 
+  const currentaPath = useLocation().pathname
+
 
   useGSAP(() => {
 
     const tl = gsap.timeline()
-    
+
     tl.to(stairRef.current, {
       display:"block"
     }) 
@@ -38,7 +41,7 @@ import { useRef } from 'react'
     tl.to(".stair",{
       y:'0%'
     })
-  })
+  }, [currentaPath]) 
 
     return (
       <div ref={stairRef} className='h-screen w-full fixed z-10 top-0' >
