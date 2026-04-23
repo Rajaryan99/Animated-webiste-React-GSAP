@@ -5,9 +5,9 @@ import { useRef } from 'react'
 import { useLocation } from 'react-router-dom'
   
 
-  export default function stairs() {
+  export default function Stairs(props) {
 
-    
+     
   const stairRef = useRef(null)
 
   const currentaPath = useLocation().pathname
@@ -43,8 +43,14 @@ import { useLocation } from 'react-router-dom'
     })
   }, [currentaPath]) 
 
+  console.log(props);
+  
+
     return (
+
+      <div>
       <div ref={stairRef} className='h-screen w-full fixed z-10 top-0' >
+
       <div className='h-full w-full  flex'>
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
@@ -52,6 +58,7 @@ import { useLocation } from 'react-router-dom'
       <div className=' stair h-full w-1/5 bg-black'> </div>
       <div className=' stair h-full w-1/5 bg-black'> </div>
     </div>
+     </div>
      </div>
     )
   }
