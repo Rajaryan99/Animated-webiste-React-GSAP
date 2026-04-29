@@ -2,10 +2,13 @@ import React from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
+import { useLocation } from 'react-router-dom';
 
 export default function Stairs() {
 
    const stairParentDivRef = useRef(null);
+
+   const currentPath = useLocation().pathname;
 
 
 useGSAP(() => {
@@ -38,7 +41,9 @@ useGSAP(() => {
     y:"0%",
    })
      
-})
+}, [currentPath])
+
+
   return (
        <div ref={stairParentDivRef} className='h-screen w-full  fixed z-20 top-0'>
     <div className='h-screen w-full flex ' >
