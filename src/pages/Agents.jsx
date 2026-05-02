@@ -26,11 +26,16 @@ export default function Agents() {
     gsap.to(divImageRef.current, {
       scrollTrigger:{
         trigger: divImageRef.current,
-        // markers:true,
+         markers:true,
         start:'top 28.5%',
         end:'top -110%',
         pin:true,
+        pinSpacing:true,
+        pinReparent:true,
+        pinType:'transform',
         scrub: true,
+   
+    
         onUpdate:(elem) => {
           let imageIndex;
           if(elem.progress < 1){
@@ -50,7 +55,7 @@ export default function Agents() {
   })
 
   return (
-    <div className="section1">
+    <div className="section1 py-1">
     <div className='bg-white'>
       <div ref={divImageRef} className=' absolute  h-80 w-55 rounded-3xl bg-white overflow-hidden object-cover  left-115 top-55'>
           <img ref={imageRef} src="/src/assets/team/CAMILLE_640X960_2.jpg" className='h-full w-full'  alt=""  />

@@ -46,7 +46,8 @@ useGSAP(() => {
 
    gsap.from(pageRef.current,{
       opacity:0,
-      delay:1.2
+      delay:1.3,
+      scale:1.5
    })
    
      
@@ -70,7 +71,7 @@ console.log(props.children)
       <div className='stair h-full w-1/5 bg-black'></div>
     </div>
     </div>
-    <div ref={pageRef} className='pageDiv bg-black'>
+    <div ref={pageRef}>
     {props.children}
     </div>
       </div>
